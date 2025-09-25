@@ -1,0 +1,4 @@
+int categoria, int anyos, String nombre, String dni, char sexo
+
+2,5,Carlos Flores,32000045H,M
+6,9,Joaquin Bizcochitos,43000095L,M
