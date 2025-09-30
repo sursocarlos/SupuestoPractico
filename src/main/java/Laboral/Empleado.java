@@ -17,11 +17,13 @@ public class Empleado extends Persona{
         super(nombre, dni, sexo);
     }
     
-    public Empleado(int categoria, int anyos, String nombre, String dni, char sexo) {
+    public Empleado(int categoria, int anyos, String nombre, String dni, char sexo) throws DatosNoCorrectosException {
         super(nombre, dni, sexo);
         if((categoria>0 && categoria<11) && (anyos > 0)){
            this.categoria = categoria;
            this.anyos = anyos;
+        }else{
+            throw new DatosNoCorrectosException("La categoria debe ser un numero entre 1 y 10 y los años deben ser mayor que 0");
         }
     }
     
